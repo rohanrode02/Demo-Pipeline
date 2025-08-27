@@ -19,7 +19,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // PUBLIC repo:
-        git url: 'REPO_URL_HERE', branch: 'BRANCH_HERE'
+        git url: 'https://github.com/rohanrode02/Demo-Pipeline.git', branch: 'main'
 
         // If your repo is PRIVATE, comment the line above and uncomment below:
         // git branch: 'BRANCH_HERE', url: 'REPO_URL_HERE', credentialsId: 'CREDENTIALS_ID_HERE'
