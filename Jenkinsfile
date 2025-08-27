@@ -26,11 +26,17 @@ pipeline {
       }
     }
 
-   stage('Build') {
-  steps {
-    bat 'exit /b 1'
-  }
-}
+     stage('Build') {
+      steps {
+        bat '''
+        echo === BUILD START ===
+        echo Date: %date% %time%
+        if not exist build mkdir build
+        echo Sample artifact created by Jenkins on %date% %time% > build\\artifact.txt
+        echo === BUILD END ===
+        '''
+      }
+    }
 
 
     stage('Archive Artifact') {
