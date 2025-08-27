@@ -60,7 +60,7 @@ pipeline {
       // Requires Email Extension plugin + SMTP configured
       emailext(
         subject: "❌ Jenkins FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-        to: 'roderohan2@gmail.com',
+        to: 'gajananrode42@gmail.com',
         body: """Build failed.
 
 Job: ${env.JOB_NAME}
